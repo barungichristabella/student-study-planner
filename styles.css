@@ -1,0 +1,161 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+/* Navigation */
+nav {
+    background-color: #1a73e8;
+    padding: 15px 30px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Header / Hero Section */
+header {
+    background-color: #1a73e8;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+header a {
+    background-color: white;
+    color: #1a73e8;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+header a:hover {
+    background-color: #e8f0fe;
+}
+
+/* About Section */
+section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #1a73e8;
+}
+
+section p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a73e8;
+    color: white;
+    font-size: 14px;
+    margin-top: 40px;
+}
+/* Form Styles */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+button {
+    background-color: #1a73e8;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+button:hover {
+    background-color: #1558b0;
+}
+
+/* Task List */
+#task-list {
+    list-style: none;
+    margin-top: 15px;
+    text-align: left;
+}
+
+#task-list li {
+    background-color: #f0f4f8;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#task-list li button {
+    background-color: #e53935;
+    padding: 6px 15px;
+    font-size: 13px;
+    margin: 0;
+}
