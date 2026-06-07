@@ -245,6 +245,27 @@ button:hover {
     .form-group select {
         font-size: 14px;
     }
+	.form-group textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 2px solid #ce93d8;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group textarea:focus {
+    border-color: #4a148c;
+}
+
+#contact-feedback {
+    margin-top: 15px;
+    font-size: 15px;
+    font-weight: bold;
+}
 
     button {
         width: 100%;
