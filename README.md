@@ -1,6 +1,7 @@
 # Student Study Planner
 
-A browser-based web application built to help students manage their assignments, topics and deadlines.
+A browser-based web application built to help students manage 
+their assignments, topics and deadlines.
 
 ## Features
 - Add tasks with subject, topic, start date, deadline, priority and status
@@ -8,6 +9,7 @@ A browser-based web application built to help students manage their assignments,
 - Tasks saved automatically using localStorage
 - Responsive design for mobile and desktop
 - Study tips page to help students perform better
+- Contact form for feedback and suggestions
 
 ## Technologies Used
 - HTML5
@@ -15,10 +17,11 @@ A browser-based web application built to help students manage their assignments,
 - JavaScript
 
 ## Pages
+- About
 - Home
 - Planner
 - Study Tips
-- About
+- Contact
 
-## Developer
-Christabella Barungi — BIT Student, Cavendish University Uganda, 2026
+##  Web Developer 
+Christabella Barungi
