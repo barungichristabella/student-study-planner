@@ -33,14 +33,23 @@ function displayTask(task, index) {
     li.setAttribute("data-index", index);
     li.innerHTML = "<div><strong>" + task.subject + "</strong> — " + task.topic + "<br>Start: " + task.startdate + " | Deadline: " + task.deadline + "<br>Priority: " + task.priority + " | Status: " + task.status + "</div>";
 
-    var btn = document.createElement("button");
-    btn.textContent = "Remove";
-    btn.onclick = function() {
+    var editBtn = document.createElement("button");
+    editBtn.textContent = "Edit";
+    editBtn.className = "edit-btn";
+    editBtn.onclick = function() {
+        editTask(index);
+    };
+
+    var removeBtn = document.createElement("button");
+    removeBtn.textContent = "Remove";
+    removeBtn.onclick = function() {
         removeTask(index);
         li.remove();
         checkReminders();
     };
-    li.appendChild(btn);
+
+    li.appendChild(editBtn);
+    li.appendChild(removeBtn);
     list.appendChild(li);
 }
 
@@ -48,6 +57,30 @@ function removeTask(index) {
     var tasks = JSON.parse(localStorage.getItem("tasks")) || [];
     tasks.splice(index, 1);
     localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+function editTask(index) {
+    var tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    var task = tasks[index];
+
+    document.getElementById("subject").value = task.subject;
+    document.getElementById("topic").value = task.topic;
+    document.getElementById("startdate").value = task.startdate;
+    document.getElementById("deadline").value = task.deadline;
+    document.getElementById("priority").value = task.priority;
+    document.getElementById("status").value = task.status;
+
+    removeTask(index);
+
+    var taskList = document.getElementById("task-list");
+    taskList.innerHTML = "";
+    var updatedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    updatedTasks.forEach(function(t, i) {
+        displayTask(t, i);
+    });
+
+    window.scrollTo(0, 0);
+    alert("Task loaded for editing! Make your changes and click Add Task to save.");
 }
 
 function checkReminders() {
@@ -90,4 +123,4 @@ window.onload = function() {
         displayTask(task, index);
     });
     checkReminders();
-}
+};
